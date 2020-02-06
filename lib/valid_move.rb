@@ -1,7 +1,7 @@
 def valid_move?(board, index)
   #for it to be a valid move, the position must be empty AND the index has to be between 0-8
 
-  if ((board[index] == "") || (board[index] == " ") || (board[index] == nil) && (index >= 0 && index <= 8))
+  if ((board[index] == "") || (board[index] == " ") || (board[index] == nil) && (index.between(0, 8))
     return true
   end
   return false
