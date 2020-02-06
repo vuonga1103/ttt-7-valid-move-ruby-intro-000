@@ -1,10 +1,10 @@
 def valid_move?(board, index)
-  if (!(board[index] == "") || (board[index] == " ") || (board[index] == nil))
-    return false
-  elsif (index < 0 || index > 8)
-    return false
+  #for it to be a valid move, the position must be empty AND the index has to be between 0-8
+
+  if ((board[index] == "") || (board[index] == " ") || (board[index] == nil) && (index >= 0 && index <= 8))
+    return true
   end
-  return true
+  return false
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
